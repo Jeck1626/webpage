@@ -8,22 +8,25 @@
     text-decoration: none;
     border: none;
     list-style: none;
+    outline: none;
+
+    font-family: "Roboto", sans-serif;
 }
 
 :root{
-    --bg--color--primary: #2b2b2b;
-    --bg--color--second: #2f2f2fac;
-    --color-50: #faf6ec;
-    --color-100:#f2e9cf;
-    --color-200:#e6d2a2;
-    --color-300:#d8b46c;
-    --color-400:#cb9844;
-    --color-500:#c68b39;
-    --color-600:#a2672c;
-    --color-700:#824c26;
-    --color-800:#6d4026;
-    --color-900:#5e3625;
-    --color-950:#361c12;
+    --bg--color--primary: #0b1d28;
+    --bg--color--second: #1a2b39;
+    --text-color: #edfefe;
+    --color-100:#d2fafb;
+    --color-200:#abf4f6;
+    --color-300:#71eaef;
+    --color-400:#30d7e0;
+    --color-500:#16c8d4;
+    --color-600:#1496a6;
+    --color-700:#177887;
+    --color-800:#1c616e;
+    --color-900:#1b525e;
+    --color-950:#0c3540;
 }
 
 html{
@@ -33,9 +36,8 @@ html{
 
 body{
     background-color: var(--bg--color--second);
-    color: var(--color-50);
+    color: var(--text-color);
     font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
 }
 
 section{
@@ -43,7 +45,7 @@ section{
     padding: 10rem 10% 2rem;
 }
 
-/* Utilidad
+/* utilities
 ===============================================*/
 
 .heading{
@@ -58,7 +60,7 @@ section{
 }
 
 span {
-    background: linear-gradient(90deg, rgba(230,210,162,1) 0%, rgba(198,139,57,1) 100%);
+    background: linear-gradient(90deg, rgba(210, 250, 251) 0%, rgba(22, 200, 212) 100%);
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
@@ -77,18 +79,22 @@ span {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 10%;
-    background-color: var(--bg--color--primary);
+    background: transparent;
+    text-align: center;
+    z-index: 100;
 }
 
-.logo{
+ .logo{
     font-size: 2.5rem;
-    color: var(--color-400);
+    color: var(--color-500);
     font-weight: 700;
     transition-duration: .5s;
 }
 
+
 .logo:hover{
     transform: scale(1.05);
+    color: var(--color-200);
 }
 
 .navbar{
@@ -98,17 +104,17 @@ span {
 }
 
 .navbar a{
-    color: var(--color-50);
+    color: var(--text-color);
     font-weight: 400;
     transition: .3s ease;
     border-bottom: .2rem solid transparent;
     text-transform: uppercase;
-    position: relative;
+    position: relative; 
 }
 
 .navbar a:hover,
 .navbar a.active{
-    color: var(--color-200);
+    color: var(--color-400);
 }
 
 .navbar a:hover::after{
@@ -119,17 +125,28 @@ span {
     bottom: -2.5rem; 
     height: .3rem; 
     gap: 3.5rem;
-    background: linear-gradient(90deg, rgba(230,210,162,1) 0%, rgba(198,139,57,1) 100%);
+    background: linear-gradient(90deg, rgba(210, 250, 251) 0%, rgba(22, 200, 212) 100%);
     z-index: -1; 
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 10% 2rem;
 }
 
 
 /*Home
 ================================*/
 
-.home-content h1{
-    font-family: "Tourney", sans-serif;
-    font-size: 6.5rem;
-    text-align: center;
-    font-weight: 500;
+.home{
+    align-items: center;
+    display: flex;
+    padding: 0 9%;
 }
