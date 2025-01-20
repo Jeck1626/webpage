@@ -15,7 +15,7 @@
 
 :root{
     --bg--color--primary: #0b1d28;
-    --bg--color--second: #1a2b39;
+    --bg--color--secondary: #1a2b39;
     --text-color: #edfefe;
     --color-100:#d2fafb;
     --color-200:#abf4f6;
@@ -35,7 +35,7 @@ html{
 }
 
 body{
-    background-color: var(--bg--color--second);
+    background-color: var(--bg--color--secondary);
     color: var(--text-color);
     font-size: 1.6rem;
 }
@@ -149,7 +149,7 @@ section{
     align-items: center;
     display: flex;
     padding: 0 9%;
-    background: url('/images/home.png') no-repeat;
+    background: url('/images/home.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -171,10 +171,15 @@ section{
 
 .home-content .text-animate h3{
     font-size: 3.2rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
+    color: var(--color-500);
+
+    /* Code to create an alternative font style with an outlined border and transparent fill
+    ================================================
     color: transparent;
-    -webkit-text-stroke: .7px var(--color-500);
+    -webkit-text-stroke: .7px var(--color-500); */
+    font-family: "Roboto", serif;
 }
 
 .home-content p{
@@ -206,7 +211,7 @@ section{
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: .1rem;
-    color: var(--bg--color--second);
+    color: var(--bg--color--secondary);
     z-index: 1;
     overflow: hidden;
     transition: .5;
@@ -225,7 +230,7 @@ section{
 }
 
 .btn-box .btn:nth-child(2):hover{
-    color: var(--bg--color--second);
+    color: var(--bg--color--secondary);
 }
 
 .btn-box .btn:nth-child(2)::before{
@@ -239,7 +244,7 @@ section{
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--bg--color--second);
+    background: var(--bg--color--secondary);
     z-index: -1;
     transition: .5s;
 }
@@ -277,7 +282,7 @@ section{
 }
 
 .home-icons a:hover{
-    color: var(--bg--color--second);
+    color: var(--bg--color--secondary);
 }
 
 .home-icons a::before{
@@ -303,4 +308,11 @@ section{
     width: 45%;
     height: 100%;
     background: transparent;
+    border: 2px solid red;
+}
+
+.home-imgHover:hover{
+    background: var(--bg--color--secondary);
+    opacity: .8;
+    transition: .5s;
 }
